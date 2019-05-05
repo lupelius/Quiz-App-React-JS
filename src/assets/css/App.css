@@ -1,7 +1,6 @@
 #root {
   display: flex;
   flex-direction: column;
-
 }
 .HolyGrail {
   display: flex;
@@ -11,25 +10,41 @@
 .HolyGrail-body {
   flex: 1;
   align-self: center;
-  width: 50vw;
+  width: 75vw;
   text-align: center;
 }
 .HolyGrail-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 68vh;
 }
 .HolyGrail-section {
   display: flex;
   flex-direction: column;
   align-self: center;
-  min-height: 65vh;
 }
 .HolyGrail-subsection {
   justify-content: center;
 }
 
+#question-container, #question-counter, #question-answers {
+  margin-top: 5vh;
+}
+
+#question-container {
+  border: solid grey 1px;
+  padding: 70px;
+  font-weight: 200;
+  font-size: 22px;
+}
+.button {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif !important;
+  font-weight: 900 !important;
+  margin: 10px !important;
+}
 header, footer {
   align-self:center;
   justify-content: center;
@@ -40,6 +55,11 @@ header, footer {
 
 footer {
   text-transform: uppercase;
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 .loading {
