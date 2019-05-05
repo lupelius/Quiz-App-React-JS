@@ -4,8 +4,9 @@ import '../assets/css/App.css';
 import { fetchGameDetails } from "../actions";
 import Loadable from 'react-loadable';
 import Loading from '../components/LoadingComponent';
-import { INITIAL_TITLE } from '../components/constants'
+import { INITIAL_TITLE, BEGIN_LABEL} from '../components/constants'
 import LoadingIcon from '../components/LoadingIcon';
+import PropTypes from 'prop-types';
 
 class App extends Component {
   state = {};
@@ -24,17 +25,37 @@ class App extends Component {
       <div>
         {this.props.isLoadingData ? <LoadingIcon />
         : <AsyncNavigation
-          results={results} title={this.props.questionTitle}
+          results={results}
+          title={this.props.questionTitle}
+          footerButton={this.props.footerButton}
         />}
       </div>
     );
   }
 }
+App.propTypes = {
+  data: PropTypes.object,
+  isLoadingData: PropTypes.bool,
+  questionTitle: PropTypes.string,
+  fetchGameDetails: PropTypes.func,
+};
 
-const mapStateToProps = ({ data = {}, isLoadingData = false, questionTitle= INITIAL_TITLE }) => ({
+App.defaultProps = {
+  data: {},
+  isLoadingData: false,
+  questionTitle: INITIAL_TITLE,
+  fetchGameDetails: () => {},
+};
+const mapStateToProps = ({
+  data = {},
+  isLoadingData = false,
+  questionTitle = INITIAL_TITLE,
+  footerButton = BEGIN_LABEL,
+}) => ({
   data,
   isLoadingData,
   questionTitle,
+  footerButton,
 });
 export default connect(
   mapStateToProps,
