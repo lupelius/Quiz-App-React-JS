@@ -35,12 +35,6 @@ class QuizScreen extends Component {
     return <div>
             {
                 <div key={this.props.currentQuestionIndex}>
-                  <div id="question-container"
-                    dangerouslySetInnerHTML={this.createMarkup(q.question)}>
-                  </div>
-                  <div id="question-counter" >
-                    {this.props.currentQuestionIndex + 1} of {AMOUNT}
-                  </div>
                   <div id="question-answers" >
                     <Button className="button" onClick={this.handleAnswerTrue}
                       variant="contained" color="primary">
@@ -51,6 +45,12 @@ class QuizScreen extends Component {
                       {ANSWER_TWO}
                     </Button>
                   </div>
+                  <div id="question-container"
+                    dangerouslySetInnerHTML={this.createMarkup(q.question)}>
+                  </div>
+                  <div id="question-counter" >
+                    {this.props.currentQuestionIndex + 1} of {AMOUNT}
+                  </div>
                 </div>
 
               }
@@ -60,11 +60,17 @@ class QuizScreen extends Component {
 QuizScreen.propTypes = {
   data: PropTypes.object,
   currentQuestionIndex: PropTypes.number,
+  handleAnswerQuestion: PropTypes.func,
+  handleQuestionTitle: PropTypes.func,
+  handleQuestionIndex: PropTypes.func,
 };
 
 QuizScreen.defaultProps = {
   data: {},
   currentQuestionIndex: 0,
+  handleAnswerQuestion: () => {},
+  handleQuestionTitle: () => {},
+  handleQuestionIndex: () => {},
 };
 const mapStateToProps = ({ data = {}, currentQuestionIndex = 0 }) => ({
   data, currentQuestionIndex,

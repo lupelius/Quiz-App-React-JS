@@ -76,6 +76,7 @@ class Footer extends Component {
   }
 }
 Footer.propTypes = {
+  text: PropTypes.string,
   data: PropTypes.object,
   currentQuestionIndex: PropTypes.number,
   handleQuestionTitle: PropTypes.func,
@@ -85,6 +86,7 @@ Footer.propTypes = {
 };
 
 Footer.defaultProps = {
+  text: BEGIN_LABEL,
   data: {},
   currentQuestionIndex: 0,
   handleQuestionTitle: () => {},

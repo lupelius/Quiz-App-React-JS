@@ -37,6 +37,7 @@ App.propTypes = {
   data: PropTypes.object,
   isLoadingData: PropTypes.bool,
   questionTitle: PropTypes.string,
+  footerButton: PropTypes.string,
   fetchGameDetails: PropTypes.func,
 };
 
@@ -44,6 +45,7 @@ App.defaultProps = {
   data: {},
   isLoadingData: false,
   questionTitle: INITIAL_TITLE,
+  footerButton: BEGIN_LABEL,
   fetchGameDetails: () => {},
 };
 const mapStateToProps = ({
