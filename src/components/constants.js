@@ -11,6 +11,9 @@ export const HOME_PATH = "/";
 export const QUIZ_TITLE = "Entertainment: ";
 export const SKIP_LABEL = "Skip To Results";
 export const QUIZ_PATH = "/quiz/";
+export const ANSWER_ONE = "True";
+export const ANSWER_TWO = "False";
+export const SKIP = "Skip to results";
 
 //Screen three texts:
 export const RESULT_TITLE = "You scored";
