@@ -1,3 +1,5 @@
+// Business logic for setting up game nav and fetching game details initially
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import '../assets/css/App.css';
@@ -16,7 +18,7 @@ class App extends Component {
   render() {
     // Pass down the results to be handled by Navigation and down to QuizScreen
     const { results } = this.props.data;
-
+    // Code splitting Navigation component so our app is faster
     const AsyncNavigation = Loadable({
       loader: () => import("../components/Navigation"),
       loading: Loading

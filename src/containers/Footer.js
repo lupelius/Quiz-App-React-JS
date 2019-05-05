@@ -1,9 +1,11 @@
-/* Footer container handles navigational and representational
-* aspects of footer section
+/*
+*  Footer container handles navigational and representational
+*  aspects of footer section, encapsulating question navigation business logic
 */
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import {
+  INITIAL_TITLE,
   HOME_PATH,
   QUIZ_PATH,
   RESULT_PATH,
@@ -20,23 +22,16 @@ import {
   handleFooterButton,
   handleQuestionIndex,
   fetchGameDetails,
-} from "../actions";
+} from '../actions';
+import { getURL } from '../utility'
 
-const getURL = text => {
-  switch (text) {
-    case BEGIN_LABEL:
-      return QUIZ_PATH;
-    case PLAY_AGAIN_LABEL:
-      return HOME_PATH;
-    default:
-      return RESULT_PATH;
-  }
-}
 class Footer extends Component {
   state = {};
   handleClick = () => {
     switch(getURL(this.props.text)) {
+      // To Screen two
       case QUIZ_PATH:
+        // Set title and button to question category and skip button
         this.props.handleQuestionTitle(
           this.props.data.results[this.props.currentQuestionIndex].category
         );
@@ -44,18 +39,26 @@ class Footer extends Component {
           SKIP
         );
         break;
+      // To screen one
       case HOME_PATH:
-        // Set questions back to zero, get new questions, set title etc
+        // get new questions from api, followed by resetting all game data
         this.props.fetchGameDetails();
+        // Reset questions' current index to 0
         this.props.handleQuestionIndex(0);
+        // Reset title to welcome title
         this.props.handleQuestionTitle(
-          this.props.data.results[this.props.currentQuestionIndex].category
+          INITIAL_TITLE
         );
+        // Reset button to begin
         this.props.handleFooterButton(
           BEGIN_LABEL
         );
+        // Reset correct number of answers
+        this.props.handleCorr(0);
         break;
+      // To screen three
       case RESULT_PATH:
+        // Set title to results and button to play again state
         this.props.handleQuestionTitle(
           RESULT_TITLE
         );
@@ -67,6 +70,7 @@ class Footer extends Component {
     }
   }
   render() {
+    // onClick event on route link is used to handle header and footer changes
     return <footer>
             <Button variant="contained" color="secondary">
               <Link onClick={this.handleClick}

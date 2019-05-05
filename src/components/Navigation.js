@@ -11,11 +11,12 @@ import Loadable from 'react-loadable';
 import Loading from './LoadingComponent';
 import HomeScreen from './HomeScreen';
 
+// Code splitting QuizScreen to make app faster
 const AsyncQuizScreen = Loadable({
   loader: () => import("../containers/QuizScreen"),
   loading: Loading
 });
-
+// Code splitting ResultScreen to make app faster
 const AsyncResultScreen = Loadable({
   loader: () => import("./ResultScreen"),
   loading: Loading

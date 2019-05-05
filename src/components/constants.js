@@ -1,3 +1,4 @@
+// These are constants for components, containers or HOCs of the game
 import { AMOUNT } from '../actions/constants';
 
 // Screen one texts:
@@ -17,5 +18,5 @@ export const SKIP = "Skip to results";
 
 //Screen three texts:
 export const RESULT_TITLE = "You scored";
-export const PLAY_AGAIN_LABEL = "Play Again";
+export const PLAY_AGAIN_LABEL = "Play Again?";
 export const RESULT_PATH = "/result/";

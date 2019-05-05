@@ -6,8 +6,9 @@ import {
   API,
   FETCH_GAME_DETAILS,
   URL,
-  SET_FOOTER, }
-from "./constants";
+  SET_FOOTER,
+  HANDLE_CORRECT_ANSWERS_COUNT,
+} from "./constants";
 
 export const fetchGameDetails = () =>
   apiAction({
@@ -39,6 +40,11 @@ export const handleFooterButton = data => ({
 
 export const handleQuestionIndex = data => ({
     type: SET_QUESTION_INDEX,
+    payload: data,
+})
+
+export const handleCorr = data => ({
+    type: HANDLE_CORRECT_ANSWERS_COUNT,
     payload: data,
 })
 

@@ -22,6 +22,9 @@ export const rootReducer = createReducer(initialState, {
     state.data.results[state.currentQuestionIndex]
       .selected_answer = action.payload;
   },
+  HANDLE_CORRECT_ANSWERS_COUNT: (state, action) => {
+    state.correct_questions = action.payload;
+  },
   SET_QUESTION_INDEX: (state, action) => {
     state.currentQuestionIndex = action.payload;
   },

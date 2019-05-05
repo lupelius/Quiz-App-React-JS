@@ -13,11 +13,13 @@
   width: 75vw;
   text-align: center;
 }
-.HolyGrail-content {
+.HolyGrail-content, .result-item  {
   display: flex;
+}
+.HolyGrail-content {
   flex-direction: column;
-  justify-content: center;
   min-height: 68vh;
+  justify-content: center;
 }
 .HolyGrail-section {
   display: flex;
@@ -37,6 +39,23 @@
   padding: 70px;
   font-weight: 200;
   font-size: 22px;
+}
+.result-item {
+  flex: 1;
+  flex-direction: row;
+  justify-content: left;
+  padding-top: 16px;
+}
+#result-correction-container {
+  font-size: 30px;
+  width: 11px;
+  margin-left: -20px;
+  margin-right: 20px;
+  margin-top: -7px;
+}
+#result-question-container {
+  text-align: left;
+  font-size: 12px;
 }
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",

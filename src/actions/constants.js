@@ -20,7 +20,7 @@ export const ANSWER_QUESTION = "ANSWER_QUESTION";
 export const SET_QUESTION_TITLE = "SET_QUESTION_TITLE";
 export const SET_FOOTER = "SET_FOOTER";
 export const SET_QUESTION_INDEX = "SET_QUESTION_INDEX";
-
+export const HANDLE_CORRECT_ANSWERS_COUNT = "HANDLE_CORRECT_ANSWERS_COUNT";
 
 // We can edit this const to have more questions
 export const AMOUNT = 10;
