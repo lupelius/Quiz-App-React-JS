@@ -6,7 +6,6 @@ import {
   HOME_PATH,
   QUIZ_PATH,
   RESULT_PATH,
-  BEGIN_LABEL
 } from './constants'
 import Loadable from 'react-loadable';
 import Loading from './LoadingComponent';
@@ -40,7 +39,7 @@ const Navigation = props => (
             </Switch>
           </main>
         </div>
-        <Footer text={BEGIN_LABEL} />
+        <Footer text={props.footerButton} />
       </div>
     </BrowserRouter>
   )
