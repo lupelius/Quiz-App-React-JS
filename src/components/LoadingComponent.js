@@ -1,10 +1,10 @@
 import React from "react";
-import loading from '../assets/images/loading.svg';
+import LoadingIcon from './LoadingIcon';
 
 const LoadingComponent = ({isLoading, error}) => {
   // Handle the loading state
   if (isLoading) {
-    return <div><img src={loading} className="loading" alt="logo" /></div>;
+    return <LoadingIcon />;
   }
   // Handle the error state
   else if (error) {

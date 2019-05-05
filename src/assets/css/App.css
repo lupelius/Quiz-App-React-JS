@@ -1,0 +1,60 @@
+#root {
+  display: flex;
+  flex-direction: column;
+
+}
+.HolyGrail {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.HolyGrail-body {
+  flex: 1;
+  align-self: center;
+  width: 50vw;
+  text-align: center;
+}
+.HolyGrail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+}
+.HolyGrail-section {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  min-height: 65vh;
+}
+.HolyGrail-subsection {
+  justify-content: center;
+}
+
+header, footer {
+  align-self:center;
+  justify-content: center;
+  min-height: 10vh;
+  width: 50vw;
+  text-align: center;
+}
+
+footer {
+  text-transform: uppercase;
+}
+
+.loading {
+  animation: App-logo-spin infinite 3s linear;
+  height: 5vmin;
+  pointer-events: none;
+  margin-left: calc(50vw - (2.5vmin));
+  margin-top: calc(50vh - (2.5vmin));
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
