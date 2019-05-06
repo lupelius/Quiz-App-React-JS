@@ -1,6 +1,5 @@
 // Business logic for setting up game nav and fetching game details initially
-
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { connect } from "react-redux";
 import '../assets/css/App.css';
 import { fetchGameDetails } from "../actions";

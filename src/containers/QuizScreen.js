@@ -1,5 +1,5 @@
 // Business logic for quiz screen (or screen 2) is kept here
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { AMOUNT } from '../actions/constants';
 import {
   ANSWER_ONE,
@@ -58,12 +58,12 @@ class QuizScreen extends Component {
     }
   };
   handleAnswerTrue = () => {
-    this.props.handleAnswerQuestion("True");
-    this.handleNextQS("True");
+    this.props.handleAnswerQuestion(ANSWER_ONE);
+    this.handleNextQS(ANSWER_ONE);
   };
   handleAnswerFalse = () => {
-    this.props.handleAnswerQuestion("False");
-    this.handleNextQS("False");
+    this.props.handleAnswerQuestion(ANSWER_TWO);
+    this.handleNextQS(ANSWER_TWO);
   };
   render() {
     return <div>

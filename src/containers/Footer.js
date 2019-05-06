@@ -2,7 +2,7 @@
 *  Footer container handles navigational and representational
 *  aspects of footer section, encapsulating question navigation business logic
 */
-import React, { Component } from "react";
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import {
   INITIAL_TITLE,
@@ -16,7 +16,7 @@ import {
 } from '../components/constants'
 import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 import {
   handleQuestionTitle,
   handleFooterButton,

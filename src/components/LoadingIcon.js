@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import loading from '../assets/images/loading.svg';
 
 const LoadingIcon = () => {

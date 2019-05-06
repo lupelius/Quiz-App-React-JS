@@ -1,4 +1,4 @@
-import { API_START, API_END, ACCESS_DENIED, API_ERROR } from "./constants";
+import { API_START, API_END, ACCESS_DENIED, API_ERROR } from './constants';
 // This is actually calling the axios http request to the api
 export const apiStart = label => ({
   type: API_START,

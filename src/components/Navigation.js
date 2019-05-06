@@ -10,6 +10,7 @@ import {
 import Loadable from 'react-loadable';
 import Loading from './LoadingComponent';
 import HomeScreen from './HomeScreen';
+import PropTypes from 'prop-types';
 
 // Code splitting QuizScreen to make app faster
 const AsyncQuizScreen = Loadable({
@@ -44,5 +45,13 @@ const Navigation = props => (
       </div>
     </BrowserRouter>
   )
+Navigation.propTypes = {
+  title: PropTypes.string,
+  footerButton: PropTypes.string,
+};
 
+Navigation.defaultProps = {
+  title: "",
+  footerButton: "",
+};
 export default Navigation;

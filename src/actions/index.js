@@ -8,7 +8,7 @@ import {
   URL,
   SET_FOOTER,
   HANDLE_CORRECT_ANSWERS_COUNT,
-} from "./constants";
+} from './constants';
 
 export const fetchGameDetails = () =>
   apiAction({

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { INITIAL_TEXT_ONE, INITIAL_TEXT_TWO } from './constants'
 
 const HomeScreen = (props) => {

@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import LoadingIcon from './LoadingIcon';
 
 const LoadingComponent = ({isLoading, error}) => {
