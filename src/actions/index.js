@@ -43,6 +43,7 @@ export const handleQuestionIndex = data => ({
     payload: data,
 })
 
+// Handle correct answer
 export const handleCorr = data => ({
     type: HANDLE_CORRECT_ANSWERS_COUNT,
     payload: data,

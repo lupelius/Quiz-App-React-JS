@@ -29,6 +29,9 @@
 .HolyGrail-subsection {
   justify-content: center;
 }
+.HolyGrail-subsection:nth-child(2) {
+  margin-top: 15vh;
+}
 
 #question-container, #question-counter, #question-answers {
   margin-top: 5vh;
@@ -55,7 +58,7 @@
 }
 #result-question-container {
   text-align: left;
-  font-size: 12px;
+  font-size: 10px;
 }
 .button {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -63,6 +66,9 @@
     sans-serif !important;
   font-weight: 900 !important;
   margin: 10px !important;
+}
+.difficulty {
+  text-transform: capitalize;
 }
 header, footer {
   align-self:center;
